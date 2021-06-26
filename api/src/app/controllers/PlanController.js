@@ -44,13 +44,13 @@ module.exports = {
 		try {
 			const { plan, client_name, address, cep, cpf } = req.body;
 
-			let plan = await PlanModel.findOne({ where: { plano } });
+			let objPlan = await PlanModel.findOne({ where: { plan } });
 
-			if (!plan) {
+			if (!objPlan) {
 
-				plan = await PlanModel.create({ plan, client_name, address, cep, cpf });
+				objPlan = await PlanModel.create({ plan, client_name, address, cep, cpf });
 
-				if (plan) {
+				if (objPlan) {
 					return res.status(201).send();
 				}
 

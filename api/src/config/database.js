@@ -8,7 +8,6 @@ module.exports = {
 	define: {
 		timestamps: true,
 		underscored: true,
-		freezeTableName: true
 	},
 	pool: {
 		max: 10,
